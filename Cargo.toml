@@ -1,0 +1,83 @@
+[package]
+name = "rust-study"
+version = "0.1.0"
+edition = "2024"
+default-run = "study"
+description = "手を動かして学ぶ Rust 練習問題集"
+
+# 練習問題チェッカー本体 (`cargo run`)
+[[bin]]
+name = "study"
+path = "src/main.rs"
+
+# 自由に試せる遊び場 (`cargo run --bin playground`)
+[[bin]]
+name = "playground"
+path = "src/bin/playground.rs"
+
+# ------------------------------------------------------------
+# 練習問題をテストターゲットとして登録しておくと、
+# エディタ (rust-analyzer) が補完やエラー表示をしてくれます。
+# `cargo test --test ex01_variables` のように個別実行もできます。
+# ------------------------------------------------------------
+[[test]]
+name = "ex01_variables"
+path = "exercises/01_variables.rs"
+
+[[test]]
+name = "ex02_functions"
+path = "exercises/02_functions.rs"
+
+[[test]]
+name = "ex03_control_flow"
+path = "exercises/03_control_flow.rs"
+
+[[test]]
+name = "ex04_ownership"
+path = "exercises/04_ownership.rs"
+
+[[test]]
+name = "ex05_borrowing"
+path = "exercises/05_borrowing.rs"
+
+[[test]]
+name = "ex06_structs"
+path = "exercises/06_structs.rs"
+
+[[test]]
+name = "ex07_enums"
+path = "exercises/07_enums.rs"
+
+[[test]]
+name = "ex08_collections"
+path = "exercises/08_collections.rs"
+
+[[test]]
+name = "ex09_errors"
+path = "exercises/09_errors.rs"
+
+[[test]]
+name = "ex10_traits"
+path = "exercises/10_traits.rs"
+
+[[test]]
+name = "ex11_generics"
+path = "exercises/11_generics.rs"
+
+[[test]]
+name = "ex12_iterators"
+path = "exercises/12_iterators.rs"
+
+[[test]]
+name = "ex13_lifetimes"
+path = "exercises/13_lifetimes.rs"
+
+[[test]]
+name = "ex14_modules"
+path = "exercises/14_modules.rs"
+
+[[test]]
+name = "ex15_todo_app"
+path = "exercises/15_todo_app.rs"
+
+[dependencies]
